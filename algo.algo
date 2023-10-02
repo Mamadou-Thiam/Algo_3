@@ -1,0 +1,21 @@
+// tri par insertion
+FUNCTION Tri_Insertion(tab:ARRAY_OF INTEGER[5],elt:INTEGER) : INTEGER
+VAR
+    i,j:INTEGER
+// utilisation d'un boucle imbriquée
+BEGIN
+// passons des valeurs à notre tableu
+tab:=[1,4,3,2,6]
+FOR i FROM 0 TO tab.length -1 STEP 1 step  DO
+  elt=tab[i]
+  j=i
+  WHILE (j>0 && tab[j-1]>elt) DO
+ tab[j]=tab[j-1]
+ j--
+  END_WHILE
+  tab[j]=elt
+
+END_FOR
+    
+    RETURN value ;
+END
